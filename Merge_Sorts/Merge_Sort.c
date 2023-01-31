@@ -60,24 +60,27 @@ void MergeSort(int arr[], int l, int h)
 int main()
 {
     int size;
+    printf("Enter Size : ");
     scanf("%d", &size);
     int* arr = (int*)malloc(size * sizeof(int));
+    printf("Enter %d Integers To Sort : ", size);
     for(int i=0; i<size; i++)
     {
         scanf("%d", (arr + i));
     }
-    //int arr[6] = {4, 12, 2, 11, 5, 9};
+
     int low = 0;
-    int high = 5;
+    int high = size-1;
 
     MergeSort(arr, low, high);
 
-    printf("\n");
-    for(int i=0; i<6; i++)
+    printf("\nSorted Array : \n");
+    for(int i=0; i<size; i++)
     {
         printf("%d\t", arr[i]);
 
     }
+    printf("\n");
 
     return 0;
 }
