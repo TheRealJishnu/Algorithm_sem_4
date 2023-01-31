@@ -22,10 +22,9 @@ void Merge(int arr[], int mid, int low, int high)
     }
 
     //Compare and sort
-    int a=0, b=0, z=low-1;
+    int a=0, b=0, z=low;
     while(a != size1 && b != size2)
     {
-        z++;
         if(temp1[a] > temp2[b])
         {
             arr[z] = temp2[b++];
@@ -34,14 +33,15 @@ void Merge(int arr[], int mid, int low, int high)
         {
             arr[z] = temp1[a++];
         }
+        z++;
     }
     while(a != size1)
     {
-        arr[++z] = temp1[a++];
+        arr[z++] = temp1[a++];
     }
     while(b != size2)
     {
-        arr[++z] = temp2[b++];
+        arr[z++] = temp2[b++];
     }
 
 }
