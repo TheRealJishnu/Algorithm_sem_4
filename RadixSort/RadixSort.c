@@ -4,7 +4,7 @@
 
 int Pow(int base, int expo)
 {
-    if(expo == 0) return 1;
+    //if(expo == 0) return 1;
     int res = 1;
     for (int i = 0; i < expo; i++)
     {
